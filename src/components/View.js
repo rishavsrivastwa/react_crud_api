@@ -1,9 +1,10 @@
 import {
     Typography, Box, TableContainer, Button,
-    TableCell, Table, TableHead, TableRow, TableBody, Paper} from "@mui/material"
+    TableCell, Table, TableHead, TableRow, TableBody, Paper
+} from "@mui/material"
 import { makeStyles } from "@mui/styles"
 import { orange } from "@mui/material/colors"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
@@ -19,25 +20,26 @@ const useStyles = makeStyles({
     }
 })
 
-const View = ()=> {
+const View = () => {
     const classes = useStyles();
-    const {id} = useParams();
-    const [student, SetStudent] = useState([]);
-    useEffect(()=>{
+    const { id } = useParams();
+    const [student, setStudent] = useState([]);
+    const navigate = useNavigate();
+    useEffect(() => {
         getStudent();
-    })
+    }, [id])
 
     async function getStudent() {
-        try{
+        try {
             const student = await axios.get(`http://localhost:3000/students/${id}`)
-            SetStudent(student.data);
-        }catch(error) {
+            setStudent(student.data);
+        } catch (error) {
             console.log("Something went wrong!")
         }
     }
-    return(
+    return (
         <div style={{ margin: '10px' }}>
-             <Box textAlign="center" p={2} className={classes.stuListColor}>
+            <Box textAlign="center" p={2} className={classes.stuListColor}>
                 <Typography variant="h4">Student Detail</Typography>
             </Box>
             <TableContainer component={Paper}>
@@ -59,7 +61,7 @@ const View = ()=> {
                 </Table>
             </TableContainer>
             <Box m={3} textAlign="center">
-                <Button variant="contained" color="primary">Back to Home</Button>
+                <Button variant="contained" color="primary" onClick={() => navigate(-1)}>Back to Home</Button>
             </Box>
         </div>
     )

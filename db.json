@@ -1,19 +1,24 @@
 {
-    "students":[
-        {
-            "id":1, 
-            "stuname": "Rishav Yudi", 
-            "email": "rishavyudi@gmail.com"
-        },
-        {
-            "id":2, 
-            "stuname": "MnIdeal", 
-            "email": "mnideal@gmail.com"
-        },
-        {
-            "id":3, 
-            "stuname": "Aadarsh Raj", 
-            "email": "rajkumar@gmail.com"
-        }
-    ]
+  "students": [
+    {
+      "stuname": "Rishav",
+      "email": "rishavyudi@gmail.com",
+      "id": 1
+    },
+    {
+      "stuname": "Mnideal@gmail.com",
+      "email": "mnideal@gmail.com",
+      "id": 2
+    },
+    {
+      "stuname": "Yudi",
+      "email": "yudi@gmail.com",
+      "id": 3
+    },
+    {
+      "stuname": "dfdf",
+      "email": "dfdf",
+      "id": 4
+    }
+  ]
 }
