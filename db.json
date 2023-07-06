@@ -1,11 +1,6 @@
 {
   "students": [
     {
-      "stuname": "Rishav",
-      "email": "rishavyudi@gmail.com",
-      "id": 1
-    },
-    {
       "stuname": "Mnideal@gmail.com",
       "email": "mnideal@gmail.com",
       "id": 2
@@ -14,11 +9,6 @@
       "stuname": "Yudi",
       "email": "yudi@gmail.com",
       "id": 3
-    },
-    {
-      "stuname": "dfdf",
-      "email": "dfdf",
-      "id": 4
     }
   ]
 }
